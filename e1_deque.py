@@ -31,21 +31,20 @@ if sum1 == sum2 == sum3:
     print sum1
 else:
     for i in xrange(0, maxlen):
-        if count1 < len1:
+        if i < len1:
             sum1 -= h1[i]
             #h1_sum.append(sum1)
             c.append(sum1)
-            count1 += 1
-        if count2 < len2:
+
+        if i < len2:
             sum2 -= h2[i]
             #h2_sum.append(sum2)
             c.append(sum2)
-            count2 += 1
-        if count3 < len3:
+
+        if i < len3:
             sum3 -= h3[i]
             #h3_sum.append(sum3)
             c.append(sum3)
-            count3 += 1
 
         #l = list(set(h1_sum) & set(h2_sum) & set(h3_sum))
         q = Counter(c)
